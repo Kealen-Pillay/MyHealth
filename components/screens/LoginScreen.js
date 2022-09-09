@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import React, { useState } from "react";
 import KeyboardAvoidingView from "react-native/Libraries/Components/Keyboard/KeyboardAvoidingView";
 
@@ -8,7 +8,10 @@ const LoginScreen = () => {
 
   return (
     <KeyboardAvoidingView style={styles.container}>
-      <Text>LoginScreen</Text>
+      <Image
+        style={styles.logo}
+        source={require("../../images/MyHealthLogo.png")}
+      />
     </KeyboardAvoidingView>
   );
 };
@@ -22,5 +25,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#7FD8BE",
     width: "100%",
+  },
+  logo: {
+    width: 100,
+    height: 100,
   },
 });
