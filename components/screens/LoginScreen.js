@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import React, { useState } from "react";
 import KeyboardAvoidingView from "react-native/Libraries/Components/Keyboard/KeyboardAvoidingView";
 
@@ -8,10 +15,31 @@ const LoginScreen = () => {
 
   return (
     <KeyboardAvoidingView style={styles.container}>
-      <Image
-        style={styles.logo}
-        source={require("../../images/MyHealthLogo.png")}
-      />
+      <View style={styles.logoContainer}>
+        <Image
+          style={styles.logo}
+          source={require("../../images/MyHealthLogo.png")}
+        />
+      </View>
+      <View style={styles.inputsContainer}>
+        <TextInput
+          style={styles.inputFields}
+          placeholder="Patient ID"
+        ></TextInput>
+        <TextInput
+          style={styles.inputFields}
+          placeholder="Password"
+          secureTextEntry
+        ></TextInput>
+      </View>
+      <View style={styles.buttonsContainer}>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Password</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Register</Text>
+        </TouchableOpacity>
+      </View>
     </KeyboardAvoidingView>
   );
 };
@@ -26,8 +54,28 @@ const styles = StyleSheet.create({
     backgroundColor: "#7FD8BE",
     width: "100%",
   },
+  logoContainer: {
+    backgroundColor: "red",
+  },
   logo: {
-    width: 100,
-    height: 100,
+    width: 120,
+    height: 120,
+  },
+  inputsContainer: {
+    width: "80%",
+    justifyContent: "space-between",
+    height: "15%",
+    marginTop: "10%",
+  },
+  inputFields: {
+    backgroundColor: "white",
+    borderRadius: 5,
+    height: 50,
+    paddingLeft: 10,
+  },
+  buttonsContainer: {
+    marginTop: "10%",
+    width: "80%",
+    backgroundColor: "red",
   },
 });
