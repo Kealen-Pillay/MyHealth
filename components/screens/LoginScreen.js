@@ -33,10 +33,10 @@ const LoginScreen = () => {
         ></TextInput>
       </View>
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Password</Text>
+        <TouchableOpacity style={[styles.button, styles.loginButton]}>
+          <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={[styles.button, styles.registerButton]}>
           <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
       </View>
@@ -55,17 +55,21 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   logoContainer: {
-    backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "30%",
+    height: "13%",
   },
   logo: {
-    width: 120,
-    height: 120,
+    width: "100%",
+    height: "100%",
   },
   inputsContainer: {
     width: "80%",
     justifyContent: "space-between",
     height: "15%",
-    marginTop: "10%",
+    marginTop: "20%",
+    marginBottom: "5%"
   },
   inputFields: {
     backgroundColor: "white",
@@ -76,6 +80,26 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     marginTop: "10%",
     width: "80%",
-    backgroundColor: "red",
+    justifyContent: "space-between",
+    height: "15%",
+  },
+  button: {
+    width: "100%",
+    height: 50,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 5,
+  },
+  buttonText: {
+    fontWeight: "bold",
+    color: "white",
+    fontSize: 18,
+  },
+  loginButton: {
+    backgroundColor: "#7280FA",
+  },
+  registerButton: {
+    backgroundColor: "#F79999",
   },
 });
