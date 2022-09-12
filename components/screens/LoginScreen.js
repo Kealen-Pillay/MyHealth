@@ -7,8 +7,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React, { useState } from "react";
-import KeyboardAvoidingView from "react-native/Libraries/Components/Keyboard/KeyboardAvoidingView";
 import { useNavigation } from "@react-navigation/native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 const LoginScreen = () => {
   const [patientID, setPatientID] = useState("");
@@ -21,7 +21,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <KeyboardAvoidingView style={styles.container}>
+    <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       <View style={styles.logoContainer}>
         <Image
           style={styles.logo}
@@ -32,11 +32,15 @@ const LoginScreen = () => {
         <TextInput
           style={styles.inputFields}
           placeholder="Patient ID"
+          value={patientID}
+          onChangeText={(text) => setPatientID(text)}
         ></TextInput>
         <TextInput
           style={styles.inputFields}
           placeholder="Password"
           secureTextEntry
+          value={password}
+          onChangeText={(text) => setPassword(text)}
         ></TextInput>
       </View>
       <View style={styles.buttonsContainer}>
@@ -50,7 +54,7 @@ const LoginScreen = () => {
           <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
       </View>
-    </KeyboardAvoidingView>
+    </KeyboardAwareScrollView>
   );
 };
 
