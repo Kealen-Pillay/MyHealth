@@ -47,6 +47,9 @@ const LoginScreen = () => {
         <TouchableOpacity style={[styles.button, styles.loginButton]}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
+        <View style={styles.miniTextContainer}>
+          <Text style={styles.miniText}>Register Below If You Don't Have An Account</Text>
+        </View>
         <TouchableOpacity
           style={[styles.button, styles.registerButton]}
           onPress={handleRegister}
@@ -115,5 +118,14 @@ const styles = StyleSheet.create({
   },
   registerButton: {
     backgroundColor: "#F79999",
+  },
+  miniTextContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "5%",
+  },
+  miniText: {
+    color: "white",
+    fontWeight: "bold",
   },
 });
