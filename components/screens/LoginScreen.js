@@ -8,10 +8,17 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import KeyboardAvoidingView from "react-native/Libraries/Components/Keyboard/KeyboardAvoidingView";
+import { useNavigation } from "@react-navigation/native";
 
 const LoginScreen = () => {
   const [patientID, setPatientID] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigation = useNavigation();
+
+  const handleRegister = () => {
+    navigation.navigate("Register");
+  };
 
   return (
     <KeyboardAvoidingView style={styles.container}>
@@ -36,7 +43,10 @@ const LoginScreen = () => {
         <TouchableOpacity style={[styles.button, styles.loginButton]}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.registerButton]}>
+        <TouchableOpacity
+          style={[styles.button, styles.registerButton]}
+          onPress={handleRegister}
+        >
           <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
       </View>
@@ -69,7 +79,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     height: "15%",
     marginTop: "20%",
-    marginBottom: "5%"
+    marginBottom: "5%",
   },
   inputFields: {
     backgroundColor: "white",
