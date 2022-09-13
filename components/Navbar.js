@@ -49,14 +49,9 @@ const Navbar = () => {
         headerShown: false,
         tabBarStyle: {
           position: "absolute",
-          bottom: 30,
-          left: 10,
-          right: 10,
-          borderRadius: 15,
-          backgroundColor: "blue",
-          height: 65,
+          backgroundColor: "#A1ABFF",
+          height: 80,
           borderTopWidth: 0,
-          elevation: 0,
         },
       })}
     >
