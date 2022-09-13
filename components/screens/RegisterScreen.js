@@ -9,6 +9,7 @@ import {
 import React, { useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useNavigation } from "@react-navigation/native";
+import { Toast } from "react-native-toast-message/lib/src/Toast";
 
 const RegisterScreen = () => {
   const [firstName, setFirstName] = useState("");
@@ -25,6 +26,12 @@ const RegisterScreen = () => {
 
   const handleRegister = () => {
     navigation.navigate("Biometrics");
+    Toast.show({
+      type: "success",
+      text1: "Successfully Registered",
+      visibilityTime: 1500,
+      position: "top",
+    });
   };
 
   return (

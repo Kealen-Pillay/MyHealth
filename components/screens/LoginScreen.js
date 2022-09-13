@@ -9,6 +9,7 @@ import {
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { Toast } from "react-native-toast-message/lib/src/Toast";
 
 const LoginScreen = () => {
   const [patientID, setPatientID] = useState("");
@@ -22,6 +23,12 @@ const LoginScreen = () => {
 
   const handleLogin = () => {
     navigation.navigate("Biometrics");
+    Toast.show({
+      type: "success",
+      text1: "Successfully Logged In",
+      visibilityTime: 1500,
+      position: "top",
+    });
   };
 
   return (
