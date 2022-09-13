@@ -4,6 +4,7 @@ import { StyleSheet } from "react-native";
 import BiometricsScreeen from "./components/screens/BiometricsScreen";
 import LoginScreen from "./components/screens/LoginScreen";
 import RegisterScreen from "./components/screens/RegisterScreen";
+import Navbar from "./components/Navbar";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,7 +24,7 @@ export default function App() {
         />
         <Stack.Screen
           name="Biometrics"
-          component={BiometricsScreeen}
+          component={Navbar}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
