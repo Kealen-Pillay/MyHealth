@@ -18,8 +18,13 @@ const RegisterScreen = () => {
   const [patientID, setPatientID] = useState("");
 
   const navigation = useNavigation();
+
   const handleLogin = () => {
     navigation.navigate("Login");
+  };
+
+  const handleRegister = () => {
+    navigation.navigate("Biometrics");
   };
 
   return (
@@ -65,11 +70,16 @@ const RegisterScreen = () => {
         ></TextInput>
       </View>
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={[styles.button, styles.registerButton]}>
+        <TouchableOpacity
+          style={[styles.button, styles.registerButton]}
+          onPress={handleRegister}
+        >
           <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
         <View style={styles.miniTextContainer}>
-          <Text style={styles.miniText}>Log In Below If You Already Have An Account</Text>
+          <Text style={styles.miniText}>
+            Log In Below If You Already Have An Account
+          </Text>
         </View>
         <TouchableOpacity
           style={[styles.button, styles.loginButton]}

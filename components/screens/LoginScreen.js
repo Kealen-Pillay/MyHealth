@@ -20,6 +20,10 @@ const LoginScreen = () => {
     navigation.navigate("Register");
   };
 
+  const handleLogin = () => {
+    navigation.navigate("Biometrics");
+  };
+
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       <View style={styles.logoContainer}>
@@ -44,11 +48,16 @@ const LoginScreen = () => {
         ></TextInput>
       </View>
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={[styles.button, styles.loginButton]}>
+        <TouchableOpacity
+          style={[styles.button, styles.loginButton]}
+          onPress={handleLogin}
+        >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <View style={styles.miniTextContainer}>
-          <Text style={styles.miniText}>Register Below If You Don't Have An Account</Text>
+          <Text style={styles.miniText}>
+            Register Below If You Don't Have An Account
+          </Text>
         </View>
         <TouchableOpacity
           style={[styles.button, styles.registerButton]}
