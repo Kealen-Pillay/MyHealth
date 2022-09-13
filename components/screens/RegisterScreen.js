@@ -7,17 +7,19 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React, { useState } from "react";
-import { useNavigation } from "@react-navigation/native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { useNavigation } from "@react-navigation/native";
 
-const LoginScreen = () => {
-  const [patientID, setPatientID] = useState("");
+const RegisterScreen = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [patientID, setPatientID] = useState("");
 
   const navigation = useNavigation();
-
-  const handleRegister = () => {
-    navigation.navigate("Register");
+  const handleLogin = () => {
+    navigation.navigate("Login");
   };
 
   return (
@@ -31,6 +33,18 @@ const LoginScreen = () => {
       <View style={styles.inputsContainer}>
         <TextInput
           style={styles.inputFields}
+          placeholder="First Name"
+          value={firstName}
+          onChangeText={(text) => setFirstName(text)}
+        ></TextInput>
+        <TextInput
+          style={styles.inputFields}
+          placeholder="Last Name"
+          value={lastName}
+          onChangeText={(text) => setLastName(text)}
+        ></TextInput>
+        <TextInput
+          style={styles.inputFields}
           placeholder="Patient ID"
           value={patientID}
           onChangeText={(text) => setPatientID(text)}
@@ -42,26 +56,33 @@ const LoginScreen = () => {
           value={password}
           onChangeText={(text) => setPassword(text)}
         ></TextInput>
+        <TextInput
+          style={styles.inputFields}
+          placeholder="Confirm Password"
+          secureTextEntry
+          value={confirmPassword}
+          onChangeText={(text) => setConfirmPassword(text)}
+        ></TextInput>
       </View>
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={[styles.button, styles.loginButton]}>
-          <Text style={styles.buttonText}>Login</Text>
+        <TouchableOpacity style={[styles.button, styles.registerButton]}>
+          <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
         <View style={styles.miniTextContainer}>
-          <Text style={styles.miniText}>Register Below If You Don't Have An Account</Text>
+          <Text style={styles.miniText}>Log In Below If You Already Have An Account</Text>
         </View>
         <TouchableOpacity
-          style={[styles.button, styles.registerButton]}
-          onPress={handleRegister}
+          style={[styles.button, styles.loginButton]}
+          onPress={handleLogin}
         >
-          <Text style={styles.buttonText}>Register</Text>
+          <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
       </View>
     </KeyboardAwareScrollView>
   );
 };
 
-export default LoginScreen;
+export default RegisterScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -76,6 +97,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "30%",
     height: "13%",
+    marginTop: "10%",
   },
   logo: {
     width: "100%",
@@ -84,9 +106,9 @@ const styles = StyleSheet.create({
   inputsContainer: {
     width: "80%",
     justifyContent: "space-between",
-    height: "15%",
-    marginTop: "20%",
-    marginBottom: "5%",
+    height: "40%",
+    marginTop: "10%",
+    marginBottom: "10%",
   },
   inputFields: {
     backgroundColor: "white",
@@ -95,7 +117,6 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   buttonsContainer: {
-    marginTop: "10%",
     width: "80%",
     justifyContent: "space-between",
     height: "15%",
@@ -113,11 +134,11 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
   },
-  loginButton: {
-    backgroundColor: "#7280FA",
-  },
   registerButton: {
     backgroundColor: "#F79999",
+  },
+  loginButton: {
+    backgroundColor: "#7280FA",
   },
   miniTextContainer: {
     justifyContent: "center",
