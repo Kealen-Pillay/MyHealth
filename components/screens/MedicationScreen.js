@@ -6,10 +6,12 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { theme } from "../../theme/theme";
+import CheckCircle from "../CheckCircle";
 
 const MedicationScreen = () => {
+  const [isTicked, setIsTicked] = useState(false);
   const medicationList = [
     {
       id: 1,
@@ -67,6 +69,7 @@ const MedicationScreen = () => {
       dosage: "2 Tablets",
     },
   ];
+
   return (
     <KeyboardAvoidingView style={styles.container}>
       <View style={styles.medicationHeaderContainer}>
@@ -77,14 +80,17 @@ const MedicationScreen = () => {
         showsVerticalScrollIndicator={false}
       >
         {medicationList.map((medication) => (
-          <TouchableOpacity>
-            <View id={medication.id} style={styles.medicationItem}>
+          <View id={medication.id} style={styles.medicationItem}>
+            <View style={styles.medicationTextContainer}>
               <Text style={styles.medicationText}>
                 {medication.medicationName}
               </Text>
               <Text style={styles.dosageText}>{medication.dosage}</Text>
             </View>
-          </TouchableOpacity>
+            <View style={styles.medicationCheckContainer}>
+              <CheckCircle />
+            </View>
+          </View>
         ))}
       </ScrollView>
     </KeyboardAvoidingView>
@@ -124,10 +130,12 @@ const styles = StyleSheet.create({
     borderColor: "black",
     marginBottom: "5%",
     flex: 1,
-    justifyContent: "center",
     paddingLeft: "5%",
+    paddingRight: "5%",
     borderColor: "black",
     borderWidth: 1,
+    flexDirection: "row",
+    alignItems: "center",
   },
   medicationText: {
     fontWeight: "bold",
@@ -135,5 +143,13 @@ const styles = StyleSheet.create({
   },
   dosageText: {
     fontSize: 15,
+  },
+  medicationTextContainer: {
+    alignItems: "flex-start",
+    width: "50%",
+  },
+  medicationCheckContainer: {
+    alignItems: "flex-end",
+    width: "50%",
   },
 });
