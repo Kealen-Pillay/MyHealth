@@ -37,32 +37,32 @@ const MedicationScreen = () => {
       dosage: "2 Tablets",
     },
     {
-      id: 5,
+      id: 6,
       medicationName: "Vitamins",
       dosage: "2 Tablets",
     },
     {
-      id: 5,
+      id: 7,
       medicationName: "Vitamins",
       dosage: "2 Tablets",
     },
     {
-      id: 5,
+      id: 8,
       medicationName: "Vitamins",
       dosage: "2 Tablets",
     },
     {
-      id: 5,
+      id: 9,
       medicationName: "Vitamins",
       dosage: "2 Tablets",
     },
     {
-      id: 5,
+      id: 10,
       medicationName: "Vitamins",
       dosage: "2 Tablets",
     },
     {
-      id: 5,
+      id: 11,
       medicationName: "Vitamins",
       dosage: "2 Tablets",
     },
@@ -72,24 +72,21 @@ const MedicationScreen = () => {
       <View style={styles.medicationHeaderContainer}>
         <Text style={styles.medicationHeader}>Medication</Text>
       </View>
-      <View style={styles.scrollViewContainer}>
-        <ScrollView
-          style={styles.scrollView}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ backgroundColor: "red" }}
-        >
-          {medicationList.map((medication) => (
-            <TouchableOpacity>
-              <View id={medication.id} style={styles.medicationItem}>
-                <Text style={styles.medicationText}>
-                  {medication.medicationName}
-                </Text>
-                <Text style={styles.dosageText}>{medication.dosage}</Text>
-              </View>
-            </TouchableOpacity>
-          ))}
-        </ScrollView>
-      </View>
+      <ScrollView
+        style={styles.scrollView}
+        showsVerticalScrollIndicator={false}
+      >
+        {medicationList.map((medication) => (
+          <TouchableOpacity>
+            <View id={medication.id} style={styles.medicationItem}>
+              <Text style={styles.medicationText}>
+                {medication.medicationName}
+              </Text>
+              <Text style={styles.dosageText}>{medication.dosage}</Text>
+            </View>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 };
@@ -116,14 +113,8 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     flex: 1,
-    width: "100%",
-  },
-  scrollViewContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
     width: "90%",
-    height: 100,
+    marginBottom: "20%",
   },
   medicationItem: {
     width: "100%",
