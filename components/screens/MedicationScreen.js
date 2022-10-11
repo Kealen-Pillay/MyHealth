@@ -16,7 +16,7 @@ const MedicationScreen = () => {
     },
     {
       id: 2,
-      medicationName: "Paracetomol",
+      medicationName: "Paracetamol",
       dosage: "2 Tablets",
     },
     {
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
     width: "100%",
     marginTop: "15%",
     paddingLeft: "5%",
+    marginBottom: "5%"
   },
   medicationHeader: {
     fontWeight: "bold",
@@ -71,7 +72,6 @@ const styles = StyleSheet.create({
     fontSize: 50,
   },
   scrollView: {
-    backgroundColor: "red",
     width: "90%",
   },
   medicationItem: {
