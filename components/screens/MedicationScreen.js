@@ -4,6 +4,7 @@ import {
   View,
   KeyboardAvoidingView,
   ScrollView,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 
@@ -42,9 +43,14 @@ const MedicationScreen = () => {
       </View>
       <ScrollView style={styles.scrollView}>
         {medicationList.map((medication) => (
-          <View id={medication.id} style={styles.medicationItem}>
-            <Text>{medication.medicationName}</Text>
-          </View>
+          <TouchableOpacity>
+            <View id={medication.id} style={styles.medicationItem}>
+              <Text style={styles.medicationText}>
+                {medication.medicationName}
+              </Text>
+              <Text style={styles.dosageText}>{medication.dosage}</Text>
+            </View>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </KeyboardAvoidingView>
@@ -64,7 +70,7 @@ const styles = StyleSheet.create({
     width: "100%",
     marginTop: "15%",
     paddingLeft: "5%",
-    marginBottom: "5%"
+    marginBottom: "5%",
   },
   medicationHeader: {
     fontWeight: "bold",
@@ -81,5 +87,17 @@ const styles = StyleSheet.create({
     height: 70,
     borderColor: "black",
     marginBottom: "5%",
+    flex: 1,
+    justifyContent: "center",
+    paddingLeft: "5%",
+    borderColor: "black",
+    borderWidth: 1,
+  },
+  medicationText: {
+    fontWeight: "bold",
+    fontSize: 20,
+  },
+  dosageText: {
+    fontSize: 15,
   },
 });
