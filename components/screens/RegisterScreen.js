@@ -10,6 +10,7 @@ import React, { useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useNavigation } from "@react-navigation/native";
 import { Toast } from "react-native-toast-message/lib/src/Toast";
+import { theme } from "../../theme/theme";
 
 const RegisterScreen = () => {
   const [firstName, setFirstName] = useState("");
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#7FD8BE",
+    backgroundColor: theme.background,
     width: "100%",
   },
   logoContainer: {
@@ -141,14 +142,13 @@ const styles = StyleSheet.create({
   button: {
     width: "100%",
     height: 50,
-    backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 5,
   },
   buttonText: {
     fontWeight: "bold",
-    color: "white",
+    color: theme.text,
     fontSize: 18,
   },
   registerButton: {
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     margin: "5%",
   },
   miniText: {
-    color: "white",
+    color: theme.text,
     fontWeight: "bold",
   },
 });

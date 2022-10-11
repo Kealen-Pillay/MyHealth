@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
+import { theme } from "../../theme/theme";
 
 const MedicationScreen = () => {
   const medicationList = [
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#7FD8BE",
+    backgroundColor: theme.background,
     width: "100%",
   },
   medicationHeaderContainer: {
@@ -110,7 +111,7 @@ const styles = StyleSheet.create({
   },
   medicationHeader: {
     fontWeight: "bold",
-    color: "white",
+    color: theme.text,
     fontSize: 50,
   },
   scrollView: {

@@ -5,6 +5,7 @@ import MedicationScreen from "./screens/MedicationScreen";
 import BiometricsScreen from "./screens/BiometricsScreen";
 import EmergencyScreen from "./screens/EmergencyScreen";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { theme } from "../theme/theme";
 
 const biometricsScreen = "biometrics";
 const medicationScreen = "medication";
@@ -49,7 +50,7 @@ const Navbar = () => {
         headerShown: false,
         tabBarStyle: {
           position: "absolute",
-          backgroundColor: "#A1ABFF",
+          backgroundColor: theme.navbar,
           height: 80,
           borderTopWidth: 0,
         },

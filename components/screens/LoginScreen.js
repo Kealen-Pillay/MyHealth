@@ -10,6 +10,7 @@ import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { Toast } from "react-native-toast-message/lib/src/Toast";
+import { theme } from "../../theme/theme";
 
 const LoginScreen = () => {
   const [patientID, setPatientID] = useState("");
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#7FD8BE",
+    backgroundColor: theme.background,
     width: "100%",
   },
   logoContainer: {
@@ -126,7 +127,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontWeight: "bold",
-    color: "white",
+    color: theme.text,
     fontSize: 18,
   },
   loginButton: {
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
     margin: "5%",
   },
   miniText: {
-    color: "white",
+    color: theme.text,
     fontWeight: "bold",
   },
 });

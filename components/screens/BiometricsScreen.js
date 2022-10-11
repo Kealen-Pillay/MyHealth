@@ -1,5 +1,6 @@
 import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { theme } from "../../theme/theme";
 
 const BiometricsScreen = () => {
   return (
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#7FD8BE",
+    backgroundColor: theme.background,
     width: "100%",
   },
 });
