@@ -17,7 +17,7 @@ const CheckCircle = () => {
         </TouchableOpacity>
       ) : (
         <TouchableOpacity onPress={handleCheck}>
-          <Ionicons name="checkmark-circle-outline" size={40} color="green"/>
+          <Ionicons name="checkmark-circle-outline" size={40} color="green" />
         </TouchableOpacity>
       )}
     </>

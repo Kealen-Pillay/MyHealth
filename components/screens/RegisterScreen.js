@@ -86,7 +86,7 @@ const RegisterScreen = () => {
         </TouchableOpacity>
         <View style={styles.miniTextContainer}>
           <Text style={styles.miniText}>
-            Log In Below If You Already Have An Account
+            Already Have An Account? Log in Below
           </Text>
         </View>
         <TouchableOpacity
