@@ -9,6 +9,8 @@ import {
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { Toast } from "react-native-toast-message/lib/src/Toast";
+import { theme } from "../../theme/theme";
 
 const LoginScreen = () => {
   const [patientID, setPatientID] = useState("");
@@ -18,6 +20,16 @@ const LoginScreen = () => {
 
   const handleRegister = () => {
     navigation.navigate("Register");
+  };
+
+  const handleLogin = () => {
+    navigation.navigate("Biometrics");
+    Toast.show({
+      type: "success",
+      text1: "Successfully Logged In",
+      visibilityTime: 1500,
+      position: "top",
+    });
   };
 
   return (
@@ -44,11 +56,16 @@ const LoginScreen = () => {
         ></TextInput>
       </View>
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={[styles.button, styles.loginButton]}>
+        <TouchableOpacity
+          style={[styles.button, styles.loginButton]}
+          onPress={handleLogin}
+        >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <View style={styles.miniTextContainer}>
-          <Text style={styles.miniText}>Register Below If You Don't Have An Account</Text>
+          <Text style={styles.miniText}>
+            Don't Have An Account? Register Below
+          </Text>
         </View>
         <TouchableOpacity
           style={[styles.button, styles.registerButton]}
@@ -68,7 +85,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#7FD8BE",
+    backgroundColor: theme.background,
     width: "100%",
   },
   logoContainer: {
@@ -110,7 +127,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontWeight: "bold",
-    color: "white",
+    color: theme.text,
     fontSize: 18,
   },
   loginButton: {
@@ -125,7 +142,7 @@ const styles = StyleSheet.create({
     margin: "5%",
   },
   miniText: {
-    color: "white",
+    color: theme.text,
     fontWeight: "bold",
   },
 });

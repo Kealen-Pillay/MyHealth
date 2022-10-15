@@ -9,6 +9,8 @@ import {
 import React, { useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useNavigation } from "@react-navigation/native";
+import { Toast } from "react-native-toast-message/lib/src/Toast";
+import { theme } from "../../theme/theme";
 
 const RegisterScreen = () => {
   const [firstName, setFirstName] = useState("");
@@ -18,8 +20,19 @@ const RegisterScreen = () => {
   const [patientID, setPatientID] = useState("");
 
   const navigation = useNavigation();
+
   const handleLogin = () => {
     navigation.navigate("Login");
+  };
+
+  const handleRegister = () => {
+    navigation.navigate("Biometrics");
+    Toast.show({
+      type: "success",
+      text1: "Successfully Registered",
+      visibilityTime: 1500,
+      position: "top",
+    });
   };
 
   return (
@@ -65,11 +78,16 @@ const RegisterScreen = () => {
         ></TextInput>
       </View>
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={[styles.button, styles.registerButton]}>
+        <TouchableOpacity
+          style={[styles.button, styles.registerButton]}
+          onPress={handleRegister}
+        >
           <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
         <View style={styles.miniTextContainer}>
-          <Text style={styles.miniText}>Log In Below If You Already Have An Account</Text>
+          <Text style={styles.miniText}>
+            Already Have An Account? Log in Below
+          </Text>
         </View>
         <TouchableOpacity
           style={[styles.button, styles.loginButton]}
@@ -89,7 +107,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#7FD8BE",
+    backgroundColor: theme.background,
     width: "100%",
   },
   logoContainer: {
@@ -124,14 +142,13 @@ const styles = StyleSheet.create({
   button: {
     width: "100%",
     height: 50,
-    backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 5,
   },
   buttonText: {
     fontWeight: "bold",
-    color: "white",
+    color: theme.text,
     fontSize: 18,
   },
   registerButton: {
@@ -146,7 +163,7 @@ const styles = StyleSheet.create({
     margin: "5%",
   },
   miniText: {
-    color: "white",
+    color: theme.text,
     fontWeight: "bold",
   },
 });

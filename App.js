@@ -3,6 +3,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StyleSheet } from "react-native";
 import LoginScreen from "./components/screens/LoginScreen";
 import RegisterScreen from "./components/screens/RegisterScreen";
+import Navbar from "./components/Navbar";
+import { Toast } from "react-native-toast-message/lib/src/Toast";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +22,13 @@ export default function App() {
           component={RegisterScreen}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="Biometrics"
+          component={Navbar}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
+      <Toast />
     </NavigationContainer>
   );
 }
