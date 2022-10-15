@@ -12,11 +12,12 @@ const BiometricsScreen = () => {
         </View>
         <View style={styles.rightVerticalContainer}>
           <View style={[styles.card, styles.hydrationContainer]}></View>
-          <View style={[styles.card, styles.bloodContainer]}></View>
+          <View style={[styles.card, styles.bloodPressureContainer]}></View>
         </View>
       </View>
       <View style={styles.bottomContainer}>
         <View style={[styles.card, styles.respirationContainer]}></View>
+        <View style={[styles.card, styles.bloodSugarContainer]}></View>
       </View>
     </KeyboardAvoidingView>
   );
@@ -66,17 +67,24 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "50%",
   },
-  bloodContainer: {
+  bloodPressureContainer: {
     marginTop: "5%",
     width: "100%",
     height: "30%",
   },
   bottomContainer: {
-    height: "100%"
+    height: "100%",
+    flexDirection: "column"
   },
   respirationContainer: {
     marginLeft: "1%",
     width: "98%",
     height: "20%",
+  },
+  bloodSugarContainer: {
+    marginLeft: "1%",
+    marginTop: "1%",
+    width: "98%",
+    height: "19%",
   },
 });
