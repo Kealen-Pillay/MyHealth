@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import React from "react";
 import { theme } from "../../theme/theme";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 const BiometricsScreen = () => {
   return (
@@ -39,6 +40,13 @@ const BiometricsScreen = () => {
                 styles.temperatureLine,
               ]}
             />
+            <View style={styles.temperatureIconContainer}>
+              <Image
+                style={styles.thermometer}
+                source={require("../../images/Thermometer_icon.png")}
+              />
+              <Text style={styles.temperatureText}>37°C</Text>
+            </View>
           </View>
         </View>
         <View style={styles.rightVerticalContainer}>
@@ -51,6 +59,10 @@ const BiometricsScreen = () => {
                 styles.hydrationLine,
               ]}
             />
+            <View style={styles.hydrationIconContainer}>
+              <Text style={styles.hydrationText}>1.3L</Text>
+              <Ionicons name="water-outline" size={80} color="#03dbfc" />
+            </View>
           </View>
           <View style={[styles.card, styles.bloodPressureContainer]}>
             <Text style={styles.cardText}>Blood Pressure</Text>
@@ -133,6 +145,7 @@ const styles = StyleSheet.create({
   hydrationContainer: {
     width: "100%",
     height: "50%",
+    alignItems: "center",
   },
   bloodPressureContainer: {
     marginTop: "5%",
@@ -186,4 +199,32 @@ const styles = StyleSheet.create({
     width: "60%",
     marginTop: "5%",
   },
+  hydrationIconContainer: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  hydrationText: {
+    color: theme.text,
+    fontWeight: "bold",
+    fontSize: 60,
+  },
+  thermometer: {
+    width: "20%",
+    height: "60%",
+  },
+  temperatureIconContainer: {
+    width: "100%",
+    height: "100%",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    paddingLeft: "15%",
+    paddingRight: "15%"
+  },
+  temperatureText: {
+    color: theme.text,
+    fontWeight: "bold",
+    fontSize: 45
+  }
 });
