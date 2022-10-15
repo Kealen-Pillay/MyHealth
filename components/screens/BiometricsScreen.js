@@ -1,4 +1,10 @@
-import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
+import {
+  KeyboardAvoidingView,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+} from "react-native";
 import React from "react";
 import { theme } from "../../theme/theme";
 
@@ -16,6 +22,13 @@ const BiometricsScreen = () => {
                 styles.heartRateLine,
               ]}
             />
+            <View style={styles.heartContainer}>
+              <Text style={styles.cardText}>90BPM</Text>
+              <Image
+                style={styles.heartIcon}
+                source={require("../../images/heartIcon.png")}
+              />
+            </View>
           </View>
           <View style={[styles.card, styles.temperatureCard]}>
             <Text style={styles.cardText}>Temperature</Text>
@@ -159,9 +172,18 @@ const styles = StyleSheet.create({
     marginLeft: "3%",
   },
   heartRateLine: { width: "50%" },
-  hydrationLine: {width: "50%"},
-  temperatureLine: {width: "60%"},
-  bloodPressureLine: {width: "75%"},
-  respirationLine: {width: "26%"},
-  bloodSugarLine: {width: "28%"},
+  hydrationLine: { width: "50%" },
+  temperatureLine: { width: "60%" },
+  bloodPressureLine: { width: "75%" },
+  respirationLine: { width: "26%" },
+  bloodSugarLine: { width: "28%" },
+  heartContainer: {
+    flex: 1,
+    alignItems: "center",
+  },
+  heartIcon: {
+    height: "60%",
+    width: "60%",
+    marginTop: "5%",
+  },
 });
