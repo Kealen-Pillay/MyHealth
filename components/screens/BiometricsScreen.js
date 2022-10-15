@@ -7,17 +7,29 @@ const BiometricsScreen = () => {
     <KeyboardAvoidingView style={styles.container}>
       <View style={styles.topContainer}>
         <View style={styles.leftVerticalContainer}>
-          <View style={[styles.card, styles.heartCard]}></View>
-          <View style={[styles.card, styles.temperatureCard]}></View>
+          <View style={[styles.card, styles.heartCard]}>
+            <Text style={styles.cardText}>Heart Rate</Text>
+          </View>
+          <View style={[styles.card, styles.temperatureCard]}>
+            <Text style={styles.cardText}>Temperature</Text>
+          </View>
         </View>
         <View style={styles.rightVerticalContainer}>
-          <View style={[styles.card, styles.hydrationContainer]}></View>
-          <View style={[styles.card, styles.bloodPressureContainer]}></View>
+          <View style={[styles.card, styles.hydrationContainer]}>
+            <Text style={styles.cardText}>Hydration</Text>
+          </View>
+          <View style={[styles.card, styles.bloodPressureContainer]}>
+            <Text style={styles.cardText}>Blood Pressure</Text>
+          </View>
         </View>
       </View>
       <View style={styles.bottomContainer}>
-        <View style={[styles.card, styles.respirationContainer]}></View>
-        <View style={[styles.card, styles.bloodSugarContainer]}></View>
+        <View style={[styles.card, styles.respirationContainer]}>
+          <Text style={styles.cardText}>Respiration</Text>
+        </View>
+        <View style={[styles.card, styles.bloodSugarContainer]}>
+          <Text style={styles.cardText}>Blood Sugar</Text>
+        </View>
       </View>
     </KeyboardAvoidingView>
   );
@@ -74,7 +86,7 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     height: "100%",
-    flexDirection: "column"
+    flexDirection: "column",
   },
   respirationContainer: {
     marginLeft: "1%",
@@ -86,5 +98,12 @@ const styles = StyleSheet.create({
     marginTop: "1%",
     width: "98%",
     height: "19%",
+  },
+  cardText: {
+    color: theme.text,
+    fontWeight: "bold",
+    fontSize: 20,
+    paddingLeft: 10,
+    paddingTop: 10
   },
 });
