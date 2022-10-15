@@ -35,37 +35,37 @@ const MedicationScreen = () => {
     },
     {
       id: 5,
-      medicationName: "Vitamins",
+      medicationName: "Vitamin B",
       dosage: "2 Tablets",
     },
     {
       id: 6,
-      medicationName: "Vitamins",
+      medicationName: "Antioxidants",
       dosage: "2 Tablets",
     },
     {
       id: 7,
-      medicationName: "Vitamins",
+      medicationName: "Vitamin C",
       dosage: "2 Tablets",
     },
     {
       id: 8,
-      medicationName: "Vitamins",
+      medicationName: "FluTex",
       dosage: "2 Tablets",
     },
     {
       id: 9,
-      medicationName: "Vitamins",
+      medicationName: "Strepsils",
       dosage: "2 Tablets",
     },
     {
       id: 10,
-      medicationName: "Vitamins",
+      medicationName: "Codral",
       dosage: "2 Tablets",
     },
     {
       id: 11,
-      medicationName: "Vitamins",
+      medicationName: "Neurofen",
       dosage: "2 Tablets",
     },
   ];
