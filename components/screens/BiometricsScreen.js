@@ -93,6 +93,16 @@ const BiometricsScreen = () => {
               styles.respirationLine,
             ]}
           />
+          <View style={styles.respirationIconContainer}>
+            <View style={styles.respirationTextContainer}>
+              <Text style={styles.respirationNumText}>16</Text>
+              <Text style={styles.respirationBreathsText}>Bpm</Text>
+            </View>
+            <Image
+              style={styles.respirationIcon}
+              source={require("../../images/respirationIcon.png")}
+            />
+          </View>
         </View>
         <View style={[styles.card, styles.bloodSugarContainer]}>
           <Text style={styles.cardText}>Blood Sugar</Text>
@@ -250,5 +260,34 @@ const styles = StyleSheet.create({
     color: theme.text,
     fontWeight: "bold",
     fontSize: 25,
+  },
+  respirationIconContainer: {
+    flexDirection: "row",
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "space-between",
+    height: "80%",
+    paddingRight: "5%",
+    paddingBottom: "5%",
+  },
+  respirationNumText: {
+    color: theme.text,
+    fontWeight: "bold",
+    fontSize: 100,
+  },
+  respirationBreathsText: {
+    color: theme.text,
+    fontWeight: "bold",
+    fontSize: 18,
+  },
+  respirationIcon: {
+    width: "35%",
+    height: "100%",
+  },
+  respirationTextContainer: {
+    flexDirection: "row",
+    flex: 1,
+    alignItems: "flex-end",
+    justifyContent: "center",
   },
 });
