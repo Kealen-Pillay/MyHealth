@@ -61,7 +61,7 @@ const BiometricsScreen = () => {
             />
             <View style={styles.hydrationIconContainer}>
               <Text style={styles.hydrationText}>1.3L</Text>
-              <Ionicons name="water-outline" size={80} color="#03dbfc" />
+              <Ionicons name="water-outline" size={120} color="#03dbfc" />
             </View>
           </View>
           <View style={[styles.card, styles.bloodPressureContainer]}>
@@ -73,6 +73,13 @@ const BiometricsScreen = () => {
                 styles.bloodPressureLine,
               ]}
             />
+            <View style={styles.bloodPressureIconContainer}>
+              <Image
+                style={styles.bloodPressureIcon}
+                source={require("../../images/bloodpressureIcon.png")}
+              />
+              <Text style={styles.bloodPressureText}>Moderate</Text>
+            </View>
           </View>
         </View>
       </View>
@@ -145,7 +152,6 @@ const styles = StyleSheet.create({
   hydrationContainer: {
     width: "100%",
     height: "50%",
-    alignItems: "center",
   },
   bloodPressureContainer: {
     marginTop: "5%",
@@ -200,13 +206,14 @@ const styles = StyleSheet.create({
     marginTop: "5%",
   },
   hydrationIconContainer: {
-    flex: 1,
+    alignItems: "center",
     justifyContent: "center",
+    height: "80%",
   },
   hydrationText: {
-    color: theme.text,
+    color: "#00e5ff",
     fontWeight: "bold",
-    fontSize: 60,
+    fontSize: 30,
   },
   thermometer: {
     width: "20%",
@@ -220,11 +227,28 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "row",
     paddingLeft: "15%",
-    paddingRight: "15%"
+    paddingRight: "15%",
   },
   temperatureText: {
     color: theme.text,
     fontWeight: "bold",
-    fontSize: 45
-  }
+    fontSize: 45,
+  },
+  bloodPressureIcon: {
+    height: "60%",
+    width: "40%",
+  },
+  bloodPressureIconContainer: {
+    flexDirection: "row",
+    height: "100%",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingRight: "5%",
+  },
+  bloodPressureText: {
+    color: theme.text,
+    fontWeight: "bold",
+    fontSize: 25,
+  },
 });
