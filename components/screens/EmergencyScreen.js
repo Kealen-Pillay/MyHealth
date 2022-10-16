@@ -5,15 +5,11 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { theme } from "../../theme/theme";
 
 const EmergencyScreen = () => {
   const [emergencyMessage, setEmergencyMessage] = useState("Inactive");
-
-  useEffect(() => {
-    setEmergencyMessage("Inactive");
-  }, []);
 
   const handleCancel = () => {
     setEmergencyMessage("Inactive");
@@ -115,7 +111,7 @@ const styles = StyleSheet.create({
     height: "50%",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: "5%"
+    marginBottom: "5%",
   },
   countdownText: {
     color: theme.text,
@@ -133,7 +129,7 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingLeft: "5%",
     paddingRight: "5%",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   cancelButton: {
     backgroundColor: "red",
