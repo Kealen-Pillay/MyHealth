@@ -96,7 +96,7 @@ const BiometricsScreen = () => {
           <View style={styles.respirationIconContainer}>
             <View style={styles.respirationTextContainer}>
               <Text style={styles.respirationNumText}>16</Text>
-              <Text style={styles.respirationBreathsText}>Bpm</Text>
+              <Text style={styles.respirationBreathsText}>bpm</Text>
             </View>
             <Image
               style={styles.respirationIcon}
@@ -113,6 +113,13 @@ const BiometricsScreen = () => {
               styles.bloodSugarLine,
             ]}
           />
+          <View style={styles.bloodSugarIconContainer}>
+            <Text style={styles.bloodSugarText}>Low</Text>
+            <Image
+              style={styles.bloodSugarIcon}
+              source={require("../../images/bloodsugaricon.png")}
+            />
+          </View>
         </View>
       </View>
     </KeyboardAvoidingView>
@@ -289,5 +296,24 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "flex-end",
     justifyContent: "center",
+  },
+  bloodSugarIconContainer: {
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "row",
+    width: "100%",
+    height: "80%",
+    paddingLeft: "15%",
+    paddingRight: "10%",
+    paddingBottom: "5%"
+  },
+  bloodSugarText: {
+    color: theme.text,
+    fontWeight: "bold",
+    fontSize: 50,
+  },
+  bloodSugarIcon: {
+    width: "35%",
+    height: "90%",
   },
 });

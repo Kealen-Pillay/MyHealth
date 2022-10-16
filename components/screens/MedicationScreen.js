@@ -80,7 +80,7 @@ const MedicationScreen = () => {
         showsVerticalScrollIndicator={false}
       >
         {medicationList.map((medication) => (
-          <View id={medication.id} style={styles.medicationItem}>
+          <View key={medication.id} style={styles.medicationItem}>
             <View style={styles.medicationTextContainer}>
               <Text style={styles.medicationText}>
                 {medication.medicationName}
