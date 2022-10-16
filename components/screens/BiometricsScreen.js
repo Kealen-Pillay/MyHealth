@@ -117,7 +117,7 @@ const BiometricsScreen = () => {
             <Text style={styles.bloodSugarText}>Low</Text>
             <Image
               style={styles.bloodSugarIcon}
-              source={require("../../images/bloodsugaricon.png")}
+              source={require("../../images/bloodsugarIcon.png")}
             />
           </View>
         </View>
