@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   },
   rightVerticalContainer: {
     height: "100%",
-    width: "45%",
+    width: "47%",
     marginTop: "15%",
     marginLeft: "1%",
   },
@@ -305,7 +305,7 @@ const styles = StyleSheet.create({
     height: "80%",
     paddingLeft: "15%",
     paddingRight: "10%",
-    paddingBottom: "5%"
+    paddingBottom: "5%",
   },
   bloodSugarText: {
     color: theme.text,
