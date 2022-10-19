@@ -33,26 +33,28 @@ const Navbar = () => {
           return (
             <Ionicons
               name={iconName}
-              size={40}
+              size={35}
               color={color}
               style={{
                 justifyContent: "center",
                 alignItems: "center",
-                marginTop: 60,
+                marginTop: 70,
                 height: "170%",
+                marginBottom: "20%"
               }}
             />
           );
         },
         tabBarActiveTintColor: "white",
         tabBarInactiveTintColor: "black",
-        tabBarShowLabel: false,
+        tabBarShowLabel: true,
         headerShown: false,
         tabBarStyle: {
           position: "absolute",
           backgroundColor: theme.navbar,
-          height: 80,
+          height: 85,
           borderTopWidth: 0,
+          alignItems: "flex-end"
         },
       })}
     >
