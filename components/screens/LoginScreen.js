@@ -44,12 +44,14 @@ const LoginScreen = () => {
         <TextInput
           style={styles.inputFields}
           placeholder="Patient ID"
+          placeholderTextColor={theme.black}
           value={patientID}
           onChangeText={(text) => setPatientID(text)}
         ></TextInput>
         <TextInput
           style={styles.inputFields}
           placeholder="Password"
+          placeholderTextColor={theme.black}
           secureTextEntry
           value={password}
           onChangeText={(text) => setPassword(text)}
@@ -142,7 +144,7 @@ const styles = StyleSheet.create({
     margin: "5%",
   },
   miniText: {
-    color: theme.text,
+    color: theme.black,
     fontWeight: "bold",
   },
 });

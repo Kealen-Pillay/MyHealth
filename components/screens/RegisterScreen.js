@@ -47,24 +47,28 @@ const RegisterScreen = () => {
         <TextInput
           style={styles.inputFields}
           placeholder="First Name"
+          placeholderTextColor={theme.black}
           value={firstName}
           onChangeText={(text) => setFirstName(text)}
         ></TextInput>
         <TextInput
           style={styles.inputFields}
           placeholder="Last Name"
+          placeholderTextColor={theme.black}
           value={lastName}
           onChangeText={(text) => setLastName(text)}
         ></TextInput>
         <TextInput
           style={styles.inputFields}
           placeholder="Patient ID"
+          placeholderTextColor={theme.black}
           value={patientID}
           onChangeText={(text) => setPatientID(text)}
         ></TextInput>
         <TextInput
           style={styles.inputFields}
           placeholder="Password"
+          placeholderTextColor={theme.black}
           secureTextEntry
           value={password}
           onChangeText={(text) => setPassword(text)}
@@ -72,6 +76,7 @@ const RegisterScreen = () => {
         <TextInput
           style={styles.inputFields}
           placeholder="Confirm Password"
+          placeholderTextColor={theme.black}
           secureTextEntry
           value={confirmPassword}
           onChangeText={(text) => setConfirmPassword(text)}
@@ -163,7 +168,7 @@ const styles = StyleSheet.create({
     margin: "5%",
   },
   miniText: {
-    color: theme.text,
+    color: theme.black,
     fontWeight: "bold",
   },
 });
