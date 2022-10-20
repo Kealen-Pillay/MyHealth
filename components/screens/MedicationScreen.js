@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   dosageText: {
-    fontSize: 15,
+    fontSize: 18,
   },
   medicationTextContainer: {
     alignItems: "flex-start",
