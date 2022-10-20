@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   medicationHeader: {
     fontWeight: "bold",
-    color: theme.text,
+    color: theme.header,
     fontSize: 50,
   },
   scrollView: {
