@@ -17,7 +17,7 @@ This will build the application and produce a QR code which can be scanned to ru
 *** NOTE: Both your physical device and computer that is running the build must be on the same wireless network connection ***
 
 For Android Users: 
-- Open the Expo Go application and scann the QR code produced in the terminal.
+- Open the Expo Go application and scan the QR code produced in the terminal.
 
 For IOS Users:
 - Open the system built camera application and scan the QR code produced in the terminal.
