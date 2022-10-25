@@ -1,4 +1,3 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MedicationScreen from "./screens/MedicationScreen";
@@ -40,7 +39,7 @@ const Navbar = () => {
                 alignItems: "center",
                 marginTop: 70,
                 height: "170%",
-                marginBottom: "20%"
+                marginBottom: "20%",
               }}
             />
           );
@@ -54,7 +53,7 @@ const Navbar = () => {
           backgroundColor: theme.navbar,
           height: 85,
           borderTopWidth: 0,
-          alignItems: "flex-end"
+          alignItems: "flex-end",
         },
       })}
     >

@@ -4,7 +4,6 @@ import {
   View,
   KeyboardAvoidingView,
   ScrollView,
-  TouchableOpacity,
 } from "react-native";
 import React, { useState } from "react";
 import { theme } from "../../theme/theme";
