@@ -1,4 +1,5 @@
 # MyHealth
+MyHealth is a mobile application created using React Native in conjunction with Expo. This mobile application serves the purpose of providing insightful real-time health data to elderly patients, for the context of remote elderly healthcare monitoring in smart homes. The following application is a non-functional collection of connected user interfaces, meant to simulate the possible design of a functioning application. The application has been designed for the elderly demographic, thus, implements usability considerations that promote a highly usable experience for elderly users.
 
 ## Cloning this repository
 If you do not already have the repository on your local machine, you can clone this repository using the following command:
