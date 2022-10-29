@@ -23,3 +23,6 @@ For Android Users:
 For IOS Users:
 - Open the system built camera application and scan the QR code produced in the terminal.
 - This will produce a link in the system built camera application which can be tapped to open the application in the Expo Go application.
+
+## Example Usage
+<img width="1116" alt="Screen Shot 2022-10-29 at 1 52 17 PM" src="https://user-images.githubusercontent.com/89432415/198754384-cdf90ab8-b279-49bb-8095-6f2e881ca4b3.png">
